@@ -75,7 +75,7 @@ pnpm run start:prod
 
 Once the application is running, access the Swagger documentation at:
 ```
-http://localhost:3000/api
+http://localhost:6969/api
 ```
 
 ### Main Endpoints
