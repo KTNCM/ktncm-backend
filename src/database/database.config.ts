@@ -5,14 +5,14 @@ import { Destination } from '../entities/destination.entity';
 import { UserAction } from '../entities/user-action.entity';
 
 export const databaseConfig: TypeOrmModuleOptions = {
-  type: 'mysql',           // MySQL type
-  host: 'localhost',       // Your MySQL host
-  port: 3306,              // MySQL port
-  username: 'root',        // MySQL username
-  password: 'root',        // MySQL password
-  database: 'ktncm',         // Your database name
+  type: 'mysql',
+  host: 'localhost',
+  port: 3306,
+  username: 'root',
+  password: 'root',
+  database: 'ktncm',
   entities: [User, Destination, UserAction],
-  synchronize: true,       // Set to false in production
+  synchronize: true,
   logging: process.env.NODE_ENV === 'development',
   migrations: [join(__dirname, 'migrations', '*.{ts,js}')],
   migrationsRun: true,
