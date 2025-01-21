@@ -109,8 +109,7 @@ The API uses JWT for authentication. To access protected endpoints:
 - password: String (hashed)
 
 ### Destinations
-- id: Primary Key
-- name: String
+- name: Primary key
 - description: String
 - contact: String (optional)
 - address: String

@@ -27,8 +27,8 @@ export class DestinationsController {
 
   @UseGuards(JwtAuthGuard)
   @Get(':id')
-  @ApiOperation({ summary: 'Get destination by id' })
-  async findOne(@Param('id') id: string) {
-    return this.destinationsService.findOne(+id);
+  @ApiOperation({ summary: 'Get destination by name' })
+  async findOne(@Param('name') name: string) {
+    return this.destinationsService.findOne(name);
   }
 } 

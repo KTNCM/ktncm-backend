@@ -20,9 +20,9 @@ export class DestinationsService {
     return this.destinationsRepository.find();
   }
 
-  async findOne(id: number): Promise<Destination> {
+  async findOne(name: string): Promise<Destination> {
     return this.destinationsRepository.findOne({ 
-      where: { id },
+      where: { name },
       relations: ['userActions']
     });
   }

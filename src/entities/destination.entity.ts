@@ -1,15 +1,12 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
+import { Entity, Column, OneToMany, PrimaryColumn } from 'typeorm';
 import { UserAction } from './user-action.entity';
 
 @Entity('destinations')
 export class Destination {
-  @PrimaryGeneratedColumn()
-  id: number;
-
-  @Column()
+  @PrimaryColumn()
   name: string;
 
-  @Column()
+  @Column({ type: 'text', charset: 'utf8mb4' })
   description: string;
 
   @Column({ nullable: true })
@@ -17,6 +14,9 @@ export class Destination {
 
   @Column()
   address: string;
+
+  @Column()
+  url: string;
 
   @OneToMany(() => UserAction, (action) => action.destination)
   userActions: UserAction[];
