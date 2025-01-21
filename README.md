@@ -58,6 +58,15 @@ Create a `.env` file in the root directory:
 JWT_SECRET=your-super-secret-key-here
 JWT_EXPIRES_IN=1h
 DATABASE_FILE=data/kdm.sqlite
+
+JWT_SECRET=your-super-secret-key-here
+JWT_EXPIRES_IN=1h
+
+DB_HOST=database-host
+DB_PORT=database-port
+DB_USER=database-user
+DB_PASSWORD=database-password
+DB_NAME=database-name
 ```
 
 ## Running the Application
@@ -100,8 +109,7 @@ The API uses JWT for authentication. To access protected endpoints:
 - password: String (hashed)
 
 ### Destinations
-- id: Primary Key
-- name: String
+- name: Primary key
 - description: String
 - contact: String (optional)
 - address: String

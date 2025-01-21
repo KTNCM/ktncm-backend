@@ -18,4 +18,8 @@ export class CreateDestinationDto {
   @ApiProperty({ example: '1 Eiffel Tower Street' })
   @IsString()
   address: string;
+
+  @ApiProperty({ example: 'http://sample.com' })
+  @IsString()
+  url: string;
 } 
